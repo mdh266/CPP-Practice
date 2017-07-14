@@ -3,6 +3,7 @@
 
 //#include "Heap.cpp"
 #include "MinHeap.cpp"
+#include "MaxHeap.cpp"
 
 int main(void)
 {
@@ -20,5 +21,17 @@ int main(void)
 
 	cout << "New min: " << minheap.getMin() << endl;
 
+
+	MaxHeap<int> maxheap(vals); //(vals);
+
+	maxheap.print();
+
+	cout << "Min: "  << maxheap.getMax() << endl;
+
+	maxheap.remove();
+
+	maxheap.print();
+
+	cout << "New min: " << maxheap.getMax() << endl;
 	return 0;
 }
